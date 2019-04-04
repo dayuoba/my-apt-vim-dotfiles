@@ -1,0 +1,134 @@
+{
+    "global": {
+        "depends-on": [
+            {
+                "name": "vim",
+                "recipe": {
+                    "darwin": [],
+                    "linux": [
+                        "sudo apt-get install -y vim"
+                    ]
+                }
+            },
+            {
+                "name": "git",
+                "recipe": {
+                    "darwin": [],
+                    "linux": [
+                        "sudo apt-get install -y git"
+                    ]
+                }
+            },
+            {
+                "name": "brew",
+                "recipe": {
+                    "darwin": [
+                        "ruby -e \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\""
+                    ],
+                    "linux": []
+                }
+            },
+            {
+                "name": "python",
+                "recipe": {}
+            }
+        ],
+        "install-target": "~/.vimpkg/bundle"
+    },
+    "packages": [
+        {
+            "depends-on": [
+                {
+                    "name": "ctags",
+                    "recipe": {
+                        "darwin": [
+                            "curl -LSso ctags-5.8.tar.gz 'http://sourceforge.net/projects/ctags/files/ctags/5.8/ctags-5.8.tar.gz/download?use_mirror=iweb'",
+                            "tar xzf ctags-5.8.tar.gz",
+                            "cd ctags-5.8",
+                            "sudo ./configure",
+                            "sudo make",
+                            "sudo make install"
+                        ],
+                        "linux": [
+                            "curl -LSso ctags-5.8.tar.gz 'http://sourceforge.net/projects/ctags/files/ctags/5.8/ctags-5.8.tar.gz/download?use_mirror=iweb'",
+                            "tar xzf ctags-5.8.tar.gz",
+                            "cd ctags-5.8",
+                            "sudo ./configure",
+                            "sudo make",
+                            "sudo make install"
+                        ]
+                    }
+                }
+            ],
+            "name": "tagbar",
+            "pkg-url": "https://github.com/majutsushi/tagbar.git",
+            "recipe": {}
+        },
+        {
+            "depends-on": [],
+            "name": "ctrlp.vim",
+            "pkg-url": "https://github.com/kien/ctrlp.vim.git",
+            "recipe": {}
+        },
+        {
+            "depends-on": [],
+            "name": "auto-pairs",
+            "pkg-url": "https://github.com/jiangmiao/auto-pairs.git",
+            "recipe": {}
+        },
+        {
+            "depends-on": [],
+            "name": "vim-polyglot",
+            "pkg-url": "https://github.com/sheerun/vim-polyglot.git",
+            "recipe": {}
+        },
+        {
+            "depends-on": [],
+            "name": "vim",
+            "pkg-url": "https://github.com/dracula/vim.git",
+            "recipe": {}
+        },
+        {
+            "depends-on": [],
+            "name": "vim-go",
+            "pkg-url": "https://github.com/fatih/vim-go.git",
+            "recipe": {}
+        },
+        {
+            "depends-on": [],
+            "name": "vim-irblack",
+            "pkg-url": "https://github.com/dayuoba/vim-irblack.git",
+            "recipe": {}
+        },
+        {
+            "depends-on": [],
+            "name": "is.vim",
+            "pkg-url": "https://github.com/haya14busa/is.vim.git",
+            "recipe": {}
+        },
+        {
+            "depends-on": [],
+            "name": "eleline.vim",
+            "pkg-url": "https://github.com/liuchengxu/eleline.vim.git",
+            "recipe": {}
+        },
+        {
+            "depends-on": [],
+            "name": "vim-sleuth",
+            "pkg-url": "https://github.com/tpope/vim-sleuth.git",
+            "recipe": {}
+        },
+        {
+            "depends-on": [],
+            "name": "emmet-vim",
+            "pkg-url": "https://github.com/mattn/emmet-vim.git",
+            "recipe": {}
+        },
+        {
+            "depends-on": [],
+            "name": "EasyMotion",
+            "pkg-url": "https://github.com/vim-scripts/EasyMotion.git",
+            "recipe": {}
+        }
+    ]
+}
